@@ -8,8 +8,12 @@ contract Storage {
 
     enum State {Pending, Approved, Rejected}
 
-    function setCounter () public {
-        counter = 1;
+    function setCounter (uint newCounter) public {
+        counter = newCounter;
+    }
+
+    function addCounter () public {
+        counter += 1;
     }
 
     function getCounter()  external view returns (uint) {
